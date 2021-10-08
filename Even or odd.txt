@@ -1,0 +1,27 @@
+/*Objective - This program takes number from user and checks whether it is even or odd.
+
+Author name - Sandhya V
+Created on - 23/09/2021
+Dependencies - 
+Modified on - 
+*/
+//pre-processor directives
+#include <stdio.h>
+//Main Driver code
+int main(void) 
+{
+  //variable declaration
+  int n;
+  printf("Enter a number:\n");
+  scanf("%d",&n);
+  //checks whether number is even or odd
+  if(n%2==0)
+  {
+    printf("The number is even %d",n*50);
+  }
+  else
+  {
+  printf("The number is odd %d",n+50);
+  }
+  return 0;
+}
