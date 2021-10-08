@@ -1,0 +1,33 @@
+/*Objective - To implement simple calculator, this program takes two inputs from user and perform addition, subtraction, multiplication, division operation.
+
+Author name - Sandhya V
+Created on - 23/09/2021
+Dependencies - 
+Modified on - 
+*/
+//preprocessor directives
+#include <stdio.h>
+//Main Driver Code
+int main(void) 
+{
+  //Declaration of variables
+  int num1=0;
+  int num2=0;
+  int sum=0;
+  int sub=0;
+  int mul=0;
+  int div=0;
+  printf("Enter two numbers\n");
+  scanf("%d",&num1); //reading num1 provided by user
+  scanf("%d",&num2); //reading num1 provided by user
+  sum=num1+num2; //addition operation 
+  printf("Addition of two numbers is %d:\n",sum);
+  sub=num1-num2; //subtraction operation
+  printf("Subtraction of two numbers is %d:\n",sub);
+  mul=num1*num2; //Multiplication operation
+  printf("Multiplication of two numbers is %d:\n",mul);
+  div=num1/num2; //Division operation
+  //the denominator should be greator than zero
+  printf("Division of two numbers is: %d\n",div);
+  return 0;
+}
