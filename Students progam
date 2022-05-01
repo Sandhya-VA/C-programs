@@ -1,0 +1,19 @@
+/*Objective - To implement a basic operation of secured marks of the students in a class.
+
+Author name - Sandhya V
+Created on - 15/12/2019
+Dependencies - 
+Modified on - 
+*/
+//preprocessor directives
+#include <stdio.h>
+int main(void) {
+int count=45,boys=25,girls;
+girls=count-boys;
+printf("The total number of girls are: %d\n",girls);
+int ps=(45*80)/100;
+printf("Total students who secured grade A:%d\n",ps);
+int gs=ps-17;
+printf("The total number of girls secured grade A:%d",gs);
+return 0;
+}
