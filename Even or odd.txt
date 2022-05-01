@@ -1,7 +1,7 @@
 /*Objective - This program takes number from user and checks whether it is even or odd.
 
 Author name - Sandhya V
-Created on - 23/09/2021
+Created on - 12/12/2019
 Dependencies - 
 Modified on - 
 */
