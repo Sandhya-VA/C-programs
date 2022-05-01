@@ -1,0 +1,51 @@
+/*Objective - To implement a program to calculate the interest based on the type of the account and eligibility.
+
+Author name - Sandhya V
+Created on - 15/12/2019
+Dependencies - 
+Modified on - 
+*/
+//preprocessor directives
+#include <stdio.h>
+#include<ctype.h>
+int main(void) {
+  char str[30];
+  int bal;
+  int c;
+  float s;
+  printf("\nHi, Welcome***\n Please Enter Your Name: ");
+  scanf("%s",str);
+  printf("Enter Your Account Balance: ");
+  scanf("%d",&bal);
+
+  if(bal<100000)
+  printf("eligible for basic plan");
+
+  else if(bal>=100000 && bal<=150000)
+  printf("eligible for silver plan");
+
+  else if(bal>150000)
+  printf("eligible for gold plan");
+
+  printf("\nPlease Enter Your Account Type:\n 1.Savings(S)\n 2.Current(Cu)\n 3.Business(B)\n");
+  scanf("%d",&c);
+
+  switch(c)
+  {
+    case 1: printf("\nSavings account-Interest Applied is 5%%\n");
+            s=(bal*5*1)/100;
+            printf("Your interest after 1 year is %0.2f",s);
+           break;
+    case 2: printf("\n Current account-Interest Applied is 6%%\n");
+            s=(bal*6*1)/100;
+            printf("Your interest after 1 year is %0.2f",s);
+            break;
+   case 3: printf("\nBusiness account-Interest Applied is 6.5%%\n");
+            s=(bal*6.5*1)/100;
+            printf("Your interest after 1 year is %0.2f",s);
+            break;
+   default: printf("Please enter valid input");
+   break;
+ }
+  return 0;
+}
