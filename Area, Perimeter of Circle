@@ -1,0 +1,20 @@
+/*Objective - To calculate the area and perimeter of a circle for the radius input by the user.
+
+Author name - Sandhya V
+Created on - 14/12/2019
+Dependencies - 
+Modified on - 
+*/
+//preprocessor directives
+#include <stdio.h>
+#include<math.h>
+int main(void) {
+  float radius,area,perimeter;
+  printf("Enter radius\n");
+  scanf("%f",&radius);
+  area=M_PI*(radius*radius);
+  printf("Area of the circle is:%f\n",area);
+  perimeter=2*M_PI*radius;
+  printf("The perimeter of the circle is:%f\n",perimeter);
+  return 0;
+}
