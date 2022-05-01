@@ -1,0 +1,16 @@
+/*Objective - Usage of conditional operator for basic operation.
+
+Author name - Sandhya V
+Created on - 14/12/2019
+Dependencies - 
+Modified on - 
+*/
+//preprocessor directives
+#include <stdio.h>
+
+int main(void) {
+  int a=0xBD;//10111101
+  int c=a>>4;
+  (c&1)?printf("light on"):printf("light off");
+  return 0;
+}
