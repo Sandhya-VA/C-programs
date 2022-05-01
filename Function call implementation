@@ -1,0 +1,57 @@
+/*Objective - To implement basic arithmetic operations using functional call concept.
+
+Author name - Sandhya V
+Created on - 13/12/2019
+Dependencies - 
+Modified on - 
+*/
+//preprocessor directives
+#include <stdio.h>
+void add(int x, int y)
+{
+  int c=x+y;
+  printf("addition is\n");
+  printf("%d\n",c);
+}
+void sub(int x, int y)
+{
+  int s=x-y;
+  printf("subtraction is\n");
+  printf("%d\n",s);
+}
+
+void mul(int x, int y)
+{
+  int m=x*y;
+  printf("multiplication is\n");
+  printf("%d\n",m);
+}
+
+void div(int x, int y)
+{
+  float d=x/y;
+  printf("division is\n");
+  printf("%f\n",d);
+}
+void table(int a)
+{
+  for(int i=0;i<=10;i++)
+  {
+   int b=a*i;
+    printf("%d * %d=%d\n",a,i,(a*i));
+  }
+}
+int main(void) 
+{
+  int x,y,a;
+ printf("Enter two numbers\n");
+ scanf("%d %d",&x,&y);
+ add(x,y);
+ sub(x,y);
+ mul(x,y);
+ div(x,y);
+ printf("enter number for table\n");
+ scanf("%d",&a);
+ table(a);
+  return 0;
+}
