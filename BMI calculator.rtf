@@ -1,55 +1,48 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2636
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
-\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
-\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+/*Objective - To calculate body mass index(BMI) for the weight and height given by the user.
 
-\f0\fs24 \cf0 /*Objective - To calculate body mass index(BMI) for the weight and height given by the user.\
-\
-Author name - Sandhya V\
-Created on - 12/12/2019\
-Dependencies - \
-Modified on - \
-*/\
-//preprocessor directives\
-\
-#include <stdio.h>\
-\
-int main(void) \{\
-  typedef float f;\
-  f h;\
-  f w;\
-  f bmi;\
-  int age;\
-  char name[10];\
-  char gender[10];\
-  printf("Enter name:\\n");\
-  scanf("%s", name);\
-   printf("Enter gender:\\n");\
-  scanf("%s", gender);\
-   printf("Enter age:\\n");\
-  scanf("%d", &age);\
-  printf("Enter the height in feet:\\n");\
-  scanf("%f", &h);\
-  printf("Enter the weight in kgs:\\n");\
-  scanf("%f", &w);\
-  bmi=((w)/(h*h));\
-  printf("Hi,welcome %s\\n",name);\
-  printf("your gender is:%s\\n",gender);\
-  printf("your age is:%d\\n",age);\
-  printf("weight:%.2f,height:%.2f,bmi:%.2f\\n",w, h, bmi);\
-  if(bmi>0 && bmi <2)\{\
-    printf("you are underweight");\
-  \}\
-  else if(bmi>2 && bmi<4)\{\
-  printf("Ideal bmi");\
-  \}\
-  else if(bmi>4)\{\
-  printf("you are Overweight");\
-  \}\
-  else \{\
-  printf("you are Wrong entry");\
-  \}\
-  return 0;\
-\}}
+Author name - Sandhya V
+Created on - 12/12/2019
+Dependencies - 
+Modified on - 
+*/
+//preprocessor directives
+
+#include <stdio.h>
+
+int main(void) {
+  typedef float f;
+  f h;
+  f w;
+  f bmi;
+  int age;
+  char name[10];
+  char gender[10];
+  printf("Enter name:\n");
+  scanf("%s", name);
+   printf("Enter gender:\n");
+  scanf("%s", gender);
+   printf("Enter age:\n");
+  scanf("%d", &age);
+  printf("Enter the height in feet:\n");
+  scanf("%f", &h);
+  printf("Enter the weight in kgs:\n");
+  scanf("%f", &w);
+  bmi=((w)/(h*h));
+  printf("Hi,welcome %s\n",name);
+  printf("your gender is:%s\n",gender);
+  printf("your age is:%d\n",age);
+  printf("weight:%.2f,height:%.2f,bmi:%.2f\n",w, h, bmi);
+  if(bmi>0 && bmi <2){
+    printf("you are underweight");
+  }
+  else if(bmi>2 && bmi<4){
+  printf("Ideal bmi");
+  }
+  else if(bmi>4){
+  printf("you are Overweight");
+  }
+  else {
+  printf("you are Wrong entry");
+  }
+  return 0;
+}
