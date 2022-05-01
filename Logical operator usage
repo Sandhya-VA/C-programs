@@ -1,0 +1,29 @@
+/*Objective - To login if user enters correct username amd password.
+
+Author name - Sandhya V
+Created on - 13/12/2019
+Dependencies - 
+Modified on - 
+*/
+//preprocessor directives
+#include <stdio.h>
+#include<string.h>
+int main(void) {
+  char us[20], pa[20];
+char username[]="user";
+  char password[]="pass";
+  printf("Enter username\n");
+  scanf("%s",us);
+  printf("Enter password\n");
+  scanf("%s",pa);
+  if (strcmp(username,us)==0 && strcmp(password, pa)==0)
+  {
+    printf("Welcome to zoo");
+  }
+  else if (strcmp(username,us) || strcmp(password,pa))
+  {
+    printf("Invalid username or password");
+  }
+  
+  return 0;
+}
