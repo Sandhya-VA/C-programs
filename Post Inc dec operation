@@ -1,0 +1,21 @@
+
+/*Objective - To implement post-increment and post decrement operation.
+
+Author name - Sandhya V
+Created on - 13/12/2019
+Dependencies - 
+Modified on - 
+*/
+//preprocessor directives
+#include <stdio.h>
+int main(void) {
+  for(int i=1;i<=10;i++)
+  {
+    printf("%d\n",i);
+  }
+  for(int j=10;j>=1;j--)
+  {
+    printf("%d\n",j);
+  }
+  return 0;
+}
