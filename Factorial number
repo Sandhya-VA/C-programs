@@ -1,0 +1,22 @@
+/*Objective - To find the factorial of the input number provided the number should be greater than 9, this program returns 1 for the number less than 10.
+
+Author name - Sandhya V
+Created on - 17/12/2019
+Dependencies - 
+Modified on - 
+*/
+//preprocessor directives
+#include <stdio.h>
+
+int main(void) {
+ int i=1,fact=1,n;    
+ printf("Enter a number: ");    
+  scanf("%d",&n);  
+    do {    
+      fact=fact*i;  
+      i++;  
+  }  while(i<=n && n>=10);
+  printf("Factorial of %d is %d",n,fact);
+  
+  return 0;
+}
