@@ -1,0 +1,26 @@
+/*Objective - To implement bitwise shift i.e right and left shift operation.
+
+Author name - Sandhya V
+Created on - 13/12/2019
+Dependencies - 
+Modified on - 
+*/
+//preprocessor directives
+#include <stdio.h>
+
+int main(void) {
+  int a,n;
+  printf("enter a number to shift: ");
+  scanf("%d",&a);
+  printf("enter number-how many times you want to shift: ");
+  scanf("%d",&n);
+  for (int i=0;i<=n;i++)
+  {
+    printf("right shift %d %d\n",i,a>>i);
+  }
+  for(int i=0;i<=n;i++)
+  {
+    printf("left shift %d %d\n",i,a<<i);
+  }
+  return 0;
+}
