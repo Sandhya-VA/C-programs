@@ -1,0 +1,19 @@
+/*Objective - To implement increment and decrement operation.
+
+Author name - Sandhya V
+Created on - 13/12/2019
+Dependencies - 
+Modified on - 
+*/
+//preprocessor directives
+#include <stdio.h>
+int a=5,b=5;
+int main(void) {
+printf("%d %d\n",a,b);
+printf("%d\n",++a);//a becomes 6
+ printf("%d\n",a++); //a becomes 6
+ printf("%d\n",--b); //b becomes 4
+ printf("%d\n",b--); //b becomes 4
+
+  return 0;
+}
