@@ -1,0 +1,18 @@
+/*Objective - Implementation of a simple total and percentage calculator for the three given inputs.
+
+Author name - Sandhya V
+Created on - 14/12/2019
+Dependencies - 
+Modified on - 
+*/
+//preprocessor directives
+#include <stdio.h>
+int main(void) {
+  int m1=78,m2=45,m3=62;
+  int total;
+  total=m1+m2+m3;
+  printf("The total marks is: %d\n",total);
+  float percentage=(total/3);
+  printf("The percentage is: %f\n",percentage);
+return 0;
+}
