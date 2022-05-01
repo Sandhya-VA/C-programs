@@ -1,0 +1,27 @@
+/*Objective - Discarding the bit operation.
+
+Author name - Sandhya V
+Created on - 13/12/2019
+Dependencies - 
+Modified on - 
+*/
+//preprocessor directives
+#include <stdio.h>
+
+int main(void) {
+  int a=55;
+  unsigned int bit=0XAC;
+  unsigned int value=(bit>>4&(0XF));//bit 4 to bit 7 that is 1010&1111 gives 1010=10
+  printf("result is %i\n",value);
+  unsigned int bits=0XAC345678;
+  unsigned int num=(bits>>4) & 0XFFFF;//Bit 4 to bit 19
+  printf("result is %i\n",num);
+ 
+  a+=10;
+  printf("%d\n",a);
+  a+=10;
+  printf("%d\n",a);
+  a/=10;
+  printf("%d\n",a);
+  return 0;
+}
