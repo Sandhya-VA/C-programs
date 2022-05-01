@@ -1,0 +1,24 @@
+/*Objective - Setting the bit operation.
+
+Author name - Sandhya V
+Created on - 13/12/2019
+Dependencies - 
+Modified on - 
+*/
+//preprocessor directives
+#include <stdio.h>
+
+int main(void) {
+  int bit,n,k;
+  printf("enter a number\n");
+  scanf("%d",&bit);
+  bit=bit | (1<<7);
+  printf("number is %d\n",bit);
+  bit &=~(1<<7);
+  printf("result is %d\n",bit);
+  if(bit^(1<<(7)))
+  {
+    printf("toggled bit %d",(bit^(1<<7)));
+  }
+  return 0;
+}
