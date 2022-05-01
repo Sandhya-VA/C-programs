@@ -1,0 +1,21 @@
+/*Objective - Implementation of sizeof function.
+
+Author name - Sandhya V
+Created on - 14/12/2019
+Dependencies - 
+Modified on - 
+*/
+//preprocessor directives
+#include <stdio.h>
+
+int main(void) {
+  printf("%lu\n",sizeof(int));
+  printf("%lu\n", sizeof(float));
+  printf("%lu\n",sizeof(char));
+  printf("%lu\n",sizeof(double));
+  printf("%lu\n",sizeof(long));
+  printf("%lu\n",sizeof(unsigned long));
+  printf("%lu\n",sizeof(short int));
+  printf("%lu\n",sizeof(long int));
+  return 0;
+}
