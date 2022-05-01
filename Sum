@@ -1,0 +1,23 @@
+/*Objective - To find the sum.
+
+Author name - Sandhya V
+Created on - 17/12/2019
+Dependencies - 
+Modified on - 
+*/
+//preprocessor directives
+#include <stdio.h>
+
+int main(void) {
+  int num,sum=0,m;
+  printf("Enter number:\n");
+  scanf("%d",&num);
+  while(num)
+  {
+    m=num%10;
+    sum=sum+m;
+    num=num/10;
+  }
+  printf("sum is: %d\n",sum);
+  return 0;
+}
