@@ -1,0 +1,42 @@
+/*Objective - To implement a switch statement.
+
+Author name - Sandhya V
+Created on - 15/12/2019
+Dependencies - 
+Modified on - 
+*/
+//preprocessor directives
+#include <stdio.h>
+int main() {
+  int num;
+  printf("Enter day number: ");
+  scanf("%d",&num);
+  switch(num)
+  {
+    case 1:
+   printf("sunday Blue\n");
+   break;
+   case 2: 
+   printf("monday black\n");
+   break;
+   case 3:
+   printf("Tuesday red\n");
+   break;
+   case 4:
+   printf("Wednesday white\n");
+   break;
+   case 5:
+   printf("Thursday brown\n");
+   break;
+   case 6:
+   printf("Friday purple\n");
+   break;
+   case 7:
+   printf("Saturday orange\n");
+   break;
+   default:
+   printf("invalid input\n");
+   break;
+   }
+  return 0;
+}
