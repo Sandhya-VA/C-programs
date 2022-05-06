@@ -1,0 +1,27 @@
+/*Objective - Implementation of arithmetic pointer concept.
+
+Author name - Sandhya V
+Created on - 19/12/2019
+Dependencies - 
+Modified on - 
+*/
+//preprocessor directive
+#include <stdio.h>
+
+int main(void) {
+  int *a,k,s;
+  int arr[7]={11,22,33,44,55,66,77};
+  a=arr;
+  
+  for(int i=0;i<=6;i++)
+  {
+    printf("arr[%d]:value is %d and address is %p\n",i,*(a+i),(a+i));
+  }
+  printf("enter key number\n");
+  scanf("%d",&k);
+  printf("value is %d\n",*(arr+k));
+  printf("Address is %p\n",(arr+k));
+  s=sizeof(arr)/sizeof(arr[0]);
+  printf("size is %lu\n",s);
+  return 0;
+}
