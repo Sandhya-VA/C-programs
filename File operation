@@ -1,0 +1,24 @@
+/*Objective - Implementation of file operation concept.
+
+Author name - Sandhya V
+Created on - 20/12/2019
+Dependencies -
+Modified on -
+*/
+// preprocessor directive
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+	char name[10];
+	FILE *fp;
+	fp = fopen("hello.txt", "w");
+	if (fp == NULL) {
+		printf("Error");
+		exit(1);
+	}
+	printf("Enter string: ");
+	scanf("%s", name);
+	fprintf(fp, "%s", name);
+	fclose(fp);
+	return 0;
+}
