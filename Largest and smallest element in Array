@@ -1,0 +1,41 @@
+/*Objective - To find the largest and smallest element in an array.
+
+Author name - Sandhya V
+Created on - 18/12/2019
+Dependencies - 
+Modified on - 
+*/
+//preprocessor directives
+#include<stdio.h>
+int main()
+{
+	int a[10],size, i, min, max;
+	
+	printf("\nPlease Enter the size of an array:  ");
+  
+	scanf("%d",&size);
+	for(i=0; i<size; i++)
+	{
+		scanf("%d",&a[i]);
+	}   
+ min = a[0];
+ max = a[0];
+  	
+	for(i=1; i<size; i++)
+   	{
+    	if(min > a[i])
+     	{
+       		min = a[i];
+	 	}
+	   	if(max < a[i])
+     	{
+       		max=a[i];
+
+     	}    
+   	}
+  
+  	printf("\n Smallest element in an Array = %d", min);
+  	
+  	printf("\n Largest element in an Array = %d", max);
+  	return 0;
+}
