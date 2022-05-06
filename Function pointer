@@ -1,0 +1,41 @@
+/*Objective - Implementation of function pointer concept.
+
+Author name - Sandhya V
+Created on - 19/12/2019
+Dependencies - 
+Modified on - 
+*/
+//preprocessor directive
+#include <stdio.h>
+int sum(int a,int b)
+{
+  return a+b;
+}
+int sub(int a,int b)
+{
+  return (a-b);
+}
+int mul(int a, int b)
+{
+  return (a*b);
+}
+int div(int a, int b)
+{
+  return (a/b);
+}
+int main() {
+  int(*f1)(int,int);
+  f1=sum;
+  int op1=f1(10,10);
+  f1=sub;
+  int op2=f1(10,10);
+  printf("op1=%d\n",op1);
+   printf("op2=%d\n",op2);
+   f1=mul;
+   int op3=f1(2,2);
+   printf("op3=%d\n",op3);
+   f1=div;
+   int op4=f1(2,2);
+   printf("op4=%d\n",op4);  
+  return 0;
+}
