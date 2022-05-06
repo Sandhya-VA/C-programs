@@ -1,0 +1,52 @@
+/*Objective - To find the prime number in an array given by the user and to determine size 9f the array.
+
+Author name - Sandhya V
+Created on - 19/12/2019
+Dependencies - 
+Modified on - 
+*/
+//preprocessor directive
+#include<stdio.h>
+int prime[10];
+int primeornot()
+{
+     int a[10],n,i,j,c=0,t=0;
+    
+     printf("\nEnter array size : ");
+     scanf("%d",&n);
+     printf("\nEnter %d Numbers:\n\n",n);
+     for(i=0;i<n;i++)
+          scanf("%d",&a[i]);
+     for(i=0;i<n;i++)
+     {
+          c=0;
+          for(j=2;j<a[i];j++)
+          {
+               if(a[i]%j==0)
+               {
+                    c=1;
+                    printf("Not a prime number\n");
+                    break;
+               }
+          }
+          if(c==0)
+          {
+               prime[t]=a[i];
+               printf("Prime number\n");
+               t++;
+
+          }
+     }
+     printf("\nPrime Numbers in Above Array:\n\n");
+     for(i=0;i<t;i++)
+     {
+          printf(" %d\n",prime[i]);
+      
+     }
+     return 0;
+}
+int main()
+{
+  primeornot();
+  printf("\nsize of array is %lu\n",sizeof(prime));
+}
