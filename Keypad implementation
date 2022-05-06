@@ -1,0 +1,62 @@
+/*Objective - Implementation of keypad model and to search the presence of user provided number in the keypad.
+
+Author name - Sandhya V
+Created on - 19/12/2019
+Dependencies - 
+Modified on - 
+*/
+//preprocessor directives
+#include <stdio.h>
+#include<string.h>
+int main() {
+  char pin='0';
+  char arr[4][3];
+  int i,j,r,c;
+  for(i=0;i<4;i++)
+  {
+   for(j=0;j<3;j++)
+   {
+     if(i==3 && j==0) {
+       arr[i][j]='*';
+     }
+     else if(i==3 && j==2) {
+       arr[i][j]='#';
+     }
+     else {
+       arr[i][j]=pin;
+       pin++;
+     }
+   }  
+  }
+  for( int i=0;i<4;i++)
+  {
+    for(int j=0;j<3;j++) {
+      printf("%c\t",arr[i][j]);
+    }
+    printf("\n");
+  }
+  char pk[5]={ '1','1','1','1','\0'};
+  char p[5];
+  printf("Enter  pin: ");//4 digit number
+  int d=0;
+  while(d<4) {
+printf("Enter row and column\n");
+  scanf("%d %d",&r,&c);
+  p[d]=arr[r][c];
+  if(r<4 && c<3) {
+    printf("you pressed :%c\n",arr[r][c]);
+  }
+  else {
+    printf("Invalid input");
+  }
+  d=d+1;
+  }
+  p[4]='\0';
+  if(!strcmp(p,pk)) {
+    printf("Login Successfull");
+  }
+  else {
+    printf("Invalid pin");
+  }
+   return 0;
+}
