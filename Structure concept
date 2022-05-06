@@ -1,0 +1,66 @@
+/*Objective - Implementation of structure concept.
+
+Author name - Sandhya V
+Created on - 20/12/2019
+Dependencies -
+Modified on -
+*/
+// preprocessor directive
+#include <stdio.h>
+#include <string.h>
+struct Cars {
+	char name[50];
+	char colour[50];
+	float weight;
+	char number[10];
+	int seats;
+};
+int car1() {
+	struct Cars car1;
+	strcpy(car1.name, "BMW");
+	strcpy(car1.colour, "Black");
+	car1.weight = 1000;
+	strcpy(car1.number, "KA04MD1122");
+	car1.seats = 5;
+	printf("name: %s\n", car1.name);
+	printf("colour : %s\n", car1.colour);
+	printf("weight : %f\n", car1.weight);
+	printf("number : %s\n", car1.number);
+	printf("seats : %d\n", car1.seats);
+	return 0;
+}
+int car2() {
+	struct Cars car2;
+	strcpy(car2.name, "Mercedes Benz");
+	strcpy(car2.colour, "Black");
+	car2.weight = 1000;
+	strcpy(car2.number, "KA04MD2211");
+	car2.seats = 5;
+	printf("name: %s\n", car2.name);
+	printf("colour : %s\n", car2.colour);
+	printf("weight : %f\n", car2.weight);
+	printf("number : %s\n", car2.number);
+	printf("seats : %d\n", car2.seats);
+	return 0;
+}
+int main() {
+	int carnum;
+	printf("Enter car number \n1:BMW\n2:Benz\n");
+	scanf("%d", &carnum);
+	switch (carnum) {
+	case 1: {
+		car1();
+		break;
+	}
+	case 2: {
+		car2();
+		break;
+	}
+	default: {
+		printf("Invalid entry\n");
+		break;
+	}
+	}
+
+	return 0;
+}
