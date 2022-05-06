@@ -1,0 +1,51 @@
+/*Objective - Simple calculator implementation using functions concept.
+
+Author name - Sandhya V
+Created on - 19/12/2019
+Dependencies - 
+Modified on - 
+*/
+//preprocessor directive
+#include <stdio.h>
+double cal(double num1, double num2, char op)
+{
+ if(op == '+')
+ {
+ printf("Addition of two numbers is %lf ", num1 + num2);
+ }
+ else if(op == '-')
+ {
+ printf("Subtraction of two numbers is %lf ", num1 - num2);
+ }
+ else if(op == '*')
+ {
+ printf("Multiplication of two numbers is %lf ", num1 * num2); 
+ }
+ else if(op == '/')
+ {
+ printf("Division of two numbers is %lf ", num1 / num2);
+ }
+ else
+ {
+ printf("Invalid operator");
+ }
+}
+
+//main method start
+int main()
+{
+ double num1 , num2;
+ char op;
+
+ printf("Enter First Number ");
+ scanf("%lf", &num1);
+
+ printf("Enter Second Number ");
+ scanf("%lf", &num2);
+
+ printf("Enter operator\n");
+ scanf(" %c", &op);
+
+ cal(num1,num2,op); //calling function
+return 0;
+} 
