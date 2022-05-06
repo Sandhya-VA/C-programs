@@ -1,0 +1,35 @@
+/*Objective - Implementation of various string operation.
+
+Author name - Sandhya V
+Created on - 19/12/2019
+Dependencies - 
+Modified on - 
+*/
+//preprocessor directive
+#include <stdio.h>
+#include<string.h>
+int main(void) {
+char cap[10], captcha[10]="re10";
+ printf("Enter captcha\n");
+ scanf("%s",cap);
+ int len1=strlen(cap);
+ int len2=strlen(captcha);
+ if(len1==len2)
+ {
+   printf("Valid lenght\n");
+   if(!strcmp(cap,captcha))
+   {
+     printf("Login successfull\n");
+   }
+   else
+   {
+     printf("Please enter valid captcha\n");
+   }
+ }
+   else
+   {
+    printf("Invalid captcha lenght\n");
+   }
+ 
+  return 0;
+}
