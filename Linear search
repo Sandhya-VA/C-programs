@@ -1,0 +1,37 @@
+/*Objective - To find the element in array.
+
+Author name - Sandhya V
+Created on - 19/12/2019
+Dependencies - 
+Modified on - 
+*/
+//preprocessor directive
+#include <stdio.h>
+int main()
+{
+  int arr[20];
+  int size,key,i;
+  printf("Enter size of the array\n");
+  scanf("%d",&size);
+  printf("Enter array elements");
+  for(i=0;i<size;++i) 
+  {
+     scanf("%d",&arr[i]);
+  }
+  printf("Enter key: ");
+  scanf("%d",&key);
+  for(i=0;i<size;++i)
+  {
+   if(arr[i]==key) 
+    break;
+  }
+  if(i<size)
+  {
+  printf("Element found at index %d",i);
+  }
+  else
+  {
+  printf("Element not found");
+  }
+  return 0;
+}
