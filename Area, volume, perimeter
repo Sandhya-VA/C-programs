@@ -1,0 +1,103 @@
+/*Objective - To find area, perimeter, volume for square, triangle, cube, circle using switch statement for the input by the user.
+
+Author name - Sandhya V
+Created on - 19/12/2019
+Dependencies - 
+Modified on - 
+*/
+//preprocessor directive
+#include <stdio.h>
+#include<math.h>
+float length,breadth,aor,perimeter;
+float radius, aoc, circumference,PI=3.142;
+ float a, b, c,s, pot,aot;
+ float side,aos,pos;
+ float socu,voc;
+ int ca;
+int rect()
+{
+	printf("enter length of rectangle: ");
+	scanf("%f",&length);
+	printf("enter breadth of rectangle: ");
+	scanf("%f",&breadth);
+  aor=(length*breadth);
+	printf("AOR: %f\n",aor);
+  perimeter=2*(length+breadth);
+  printf("Perimeter of rectangle %f :\n",perimeter);
+	return 0;
+}
+int circle()
+{
+ printf("\n Please Enter the radius of a circle\n");
+  scanf("%f",&radius);
+  aoc = PI*radius*radius; 
+  circumference = 2* PI*radius;
+ printf("\n Area Of a Circle = %.2f\n", aoc);
+  printf("\n Circumference Of a Circle = %.2f\n", circumference);
+  return 0;
+}
+ int triangle()
+ {
+  printf("\nPlease Enter three sides of triangle\n");
+  scanf("%f%f%f",&a,&b,&c);
+  pot = a+b+c;
+  s = (a+b+c)/2;
+  aot = sqrt(s*(s-a)*(s-b)*(s-c));
+  printf("\n Perimeter of Traiangle = %.2f\n",pot);
+  printf("\n Area of triangle = %.2f\n",aot);
+  return 0;
+}
+int square()
+{
+  printf("enter side of square: ");
+	scanf("%f",&side);
+	aos=(side*side);
+	printf("AOS: %f\n",aos);
+  pos=4*side;
+  printf("POS: %f\n",pos);
+	return 0;
+}
+int cube()
+{
+  printf("enter side of cube: ");
+	scanf("%f",&side);
+  voc=side*side*side;
+	printf("VOC: %f\n",voc);
+	return 0;
+}
+
+int main(void)
+ {
+   printf("Enter the input \n1:rectangle\n \n2:circle\n \n3:triangle\n \n4:square\n \n5:cube\n");
+   scanf("%d",&ca);
+   switch(ca) {
+     case 1:
+     {
+       rect();
+       break;
+     }
+     case 2:
+     {
+       circle();
+       break;
+     }
+     case 3:
+     {
+       triangle();
+       break;
+     }
+     case 4:
+     {
+       square();
+       break;
+     }
+     case 5:
+     {
+       cube();
+       break;
+     }
+     default:
+     printf("Invalid input\n");
+   }
+  return 0;
+ }
