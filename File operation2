@@ -1,0 +1,69 @@
+/*Objective - Implementation of file operation concept.
+
+Author name - Sandhya V
+Created on - 20/12/2019
+Dependencies -
+Modified on -
+*/
+// preprocessor directive
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int pass(char p[10]) {
+	int i = 0, digit = 0, alpha = 0, spc = 0;
+	if (!(strlen(p) == 8))
+		puts("Password length mismatch");
+	for (i = 0; i < strlen(p); i++) {
+		if (p[i] == ' ')
+			return (0);
+		if (p[i] >= 48 && p[i] <= 57) // Ascii value of 0 is 48 and 9 is 57
+			digit++;
+		else if (
+			(p[i] >= 65 && p[i] <= 90) ||
+			(p[i] >= 97 &&
+			 p[i] <= 122)) // Ascii value of A-Z and a-z is 65-90 and 97-122
+			alpha++;
+		else
+			spc++;
+	}
+	if (digit == 3 && spc == 1 && alpha == 4)
+		return 1;
+	return 0;
+}
+
+int main() {
+	char name[10];
+	printf("Your good name please\n");
+	scanf("%s", name);
+	int i = 5, c = 0, alpha;
+	char p[8];
+	FILE *ptr1, *ptr2; // creating file pointer to work with files
+	ptr1 = fopen("Correct Password.txt", "w");   // opening file in writing mode
+	ptr2 = fopen("Incorrect Password.txt", "w"); // opening file in writing mode
+	// Program exits if the file pointer returns NULL
+	if (ptr1 == NULL)
+		exit(1);
+	if (ptr1 == NULL)
+		exit(1);
+	while (c < 3) {
+		puts("Enter your password");
+		scanf("%s", p);
+		alpha = pass(p);
+		if (alpha) {
+			puts("Correct Password\n"); // for 3 correct passwords from user the
+										// program terminates
+			c++;
+			fprintf(ptr1, "%s", p);
+			fprintf(ptr1, "%s", "\n");
+		} else {
+			puts("Incorrect Password");
+			fprintf(ptr2, "%s", p);
+			fprintf(ptr2, "%s", "\n");
+		}
+		if (c == 5)
+			break;
+	}
+	fclose(ptr1); // closing the file
+	fclose(ptr2); // closing the file
+	return 0;
+}
