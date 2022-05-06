@@ -1,0 +1,31 @@
+/*Objective - Implementation of function pointer concept.
+
+Author name - Sandhya V
+Created on - 19/12/2019
+Dependencies - 
+Modified on - 
+*/
+//preprocessor directive
+#include <stdio.h>
+void sum()
+{
+  int a=10,b=10;
+  printf("%d\n",a+b);
+}
+void sub()
+{
+  int a=10,b=10;
+  printf("%d\n",a-b);
+}
+void wrapper(void(*fun)())
+{
+  fun();
+}
+
+int main() {
+  wrapper(sum);
+  wrapper(sub);
+
+  
+  return 0;
+}
