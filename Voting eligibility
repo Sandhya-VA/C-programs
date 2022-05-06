@@ -1,0 +1,37 @@
+/*Objective - To find the eligibility of voting for the age provided by the user.
+
+Author name - Sandhya V
+Created on - 19/12/2019
+Dependencies - 
+Modified on - 
+*/
+//preprocessor directive
+#include <stdio.h>
+
+int main() {
+  int age;
+  printf("Enter age\n");
+  scanf("%d",&age);
+  do {
+    if(age==18)
+    {
+      //skip this
+      continue;
+      break;
+    }
+    else if(age>18)
+    {
+      printf("Eligible for voting\n");
+      break;
+    }
+    else
+    {
+      printf("Not eligible for voting\n");
+      break;
+    }
+  
+    }
+  while(age<100);
+ 
+  return 0;
+  }
