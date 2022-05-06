@@ -1,0 +1,32 @@
+/*Objective - Implementation of goto function for finding even, odd number.
+
+Author name - Sandhya V
+Created on - 19/12/2019
+Dependencies - 
+Modified on - 
+*/
+//preprocessor directive
+#include <stdio.h>
+void checkEvenOrOdd(int num)
+{
+	if (num % 2 == 0)
+		// jump to even
+		goto even;
+	else
+		// jump to odd
+		goto odd;
+
+even:
+	printf("%d is even", num);
+	return;
+odd:
+	printf("%d is odd", num);
+}
+
+int main() {
+	int num;
+  printf("Enter number: ");
+  scanf("%d",&num);
+	checkEvenOrOdd(num);
+	return 0;
+}
