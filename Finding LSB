@@ -1,0 +1,20 @@
+/*Objective - To print the LSB of the user inputed number.
+
+Author name - Sandhya V
+Created on - 19/12/2019
+Dependencies - 
+Modified on - 
+*/
+//preprocessor directive
+#include <stdio.h>
+int main()
+{
+ int num;
+ printf("Enter any number: ");
+ scanf("%d", &num);
+ if(num % 2)
+  printf("LSB of %d is set = 1",num);
+ else
+  printf("LSB of %d is unset = 0", num);
+ return 0;
+}
