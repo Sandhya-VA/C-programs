@@ -1,0 +1,24 @@
+/*Objective - Implementation of double pointer concept.
+
+Author name - Sandhya V
+Created on - 19/12/2019
+Dependencies - 
+Modified on - 
+*/
+//preprocessor directive
+#include <stdio.h>
+int main()
+{
+	int num = 789;
+	int *ptr2;
+	int **ptr1;
+	ptr2 = &num;
+	ptr1 = &ptr2;
+	printf("Value of num = %d\n", num );
+	printf("Value of num using pr2 = %d\n", *ptr2 );
+	printf("Value of num using pr1 = %d\n", **ptr1);
+  printf("Address of num = %p\n", &num);
+  printf("Address of num using pr2 = %p\n", ptr2);
+  printf("Address of num using pr1 = %p\n", *ptr1);
+	return 0;
+}
