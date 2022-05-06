@@ -1,0 +1,23 @@
+/*Objective - Implementation of call by reference.
+
+Author name - Sandhya V
+Created on - 19/12/2019
+Dependencies - 
+Modified on - 
+*/
+//preprocessor directive
+#include <stdio.h>
+void change(int *num) {
+  printf("Before adding value inside function num=%d\n",*num);
+  (*num)+=100;
+  printf("After adding value inside function num=%d\n",*num);
+}
+int main()
+ {
+  int x=100;
+  printf("Before function call x=%d\n",x);
+  change(&x);
+  printf("After function call x=%d\n",x);
+
+  return 0;
+}
