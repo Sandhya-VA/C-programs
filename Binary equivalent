@@ -1,0 +1,24 @@
+/*Objective - Implementation of decimal number to binary number.
+
+Author name - Sandhya V
+Created on - 19/12/2019
+Dependencies - 
+Modified on - 
+*/
+//preprocessor directive
+#include <stdio.h>
+int main() 
+{
+  int a[10], number=128, i, j;  
+  for(i = 0; number > 0; i++)
+  {
+    a[i] = number % 2;
+    number = number / 2;  
+  }
+  printf("\n Binary equivalent of 128 is\n");//binary equivalent of 128 is 10000000
+  for(j = i - 1; j >= 0; j--) 
+  {
+    printf(" %d ", a[j]);
+  }
+  return 0;
+}
