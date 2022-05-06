@@ -1,0 +1,34 @@
+/*Objective - To print the count of the money notes for the amount entered by the user.
+
+Author name - Sandhya V
+Created on - 20/12/2019
+Dependencies - 
+Modified on - 
+*/
+//preprocessor directive
+#include <stdio.h>  
+int main() 
+{  
+  int amount, i;
+  int currency[10] = {1000, 500, 200, 100, 50, 20, 10,5,2,1};
+  int noteCounter[10] ={ 0 }; 
+  printf("Enter your amount\n");  
+  scanf("%d", &amount);  
+  for(i=0;i<10;i++) 
+  {
+    if(amount >= currency[i])
+    {
+      noteCounter[i] = amount/currency[i];
+      amount = amount - noteCounter[i]*currency[i];
+    }
+  }
+  printf("Notes and their counts: \n");
+  for(i = 0; i<10; i++)
+  {
+    if(noteCounter[i] != 0)
+    {
+    printf("%drs notes = %d times\n", currency[i], noteCounter[i]);
+    }
+  }
+  return 0;  
+}
