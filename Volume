@@ -1,0 +1,32 @@
+/*Objective - To find volume of cube, cone and rectangle using side values by the user.
+
+Author name - Sandhya V
+Created on - 19/12/2019
+Dependencies - 
+Modified on - 
+*/
+//preprocessor directive
+#include <stdio.h>
+float rect(int a)
+{
+  return a*a*a;
+}
+float cone(int b)
+{
+   return 3.142*b*b*b/7;  
+}
+float cube(int c)
+{
+  return c*c*c;
+}
+int main(void) {
+  int x,y;
+  int w,z;
+  float (*f[]) (int )={rect,cone,cube};
+   printf("Please input your choice \n0:rect\n1:cone\n2:cube\n");
+  scanf("%d",&w);
+  printf("enter side\n");
+  scanf("%d",&z);
+  printf("%f",(*f[w])(z));
+ return 0;
+}
