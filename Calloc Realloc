@@ -1,0 +1,51 @@
+/*Objective - Implementation of dynamic memory allocation calloc, realloc concept.
+
+Author name - Sandhya V
+Created on - 20/12/2019
+Dependencies - 
+Modified on - 
+*/
+//preprocessor directive
+#include <stdio.h>
+#include<stdlib.h>
+int main(void) 
+{
+int *key,i,s=2,d;
+key=(int*)calloc(s,sizeof(int));
+printf("Enter your keys: \n");
+for(i=0;i<s;i++)
+{
+  scanf("%d",key+i);
+}
+while(1)
+{
+  if(key==NULL)
+  {
+    exit(0);
+  }
+  else
+  {
+    printf("keys stored succesfully\n");
+  }
+    printf("Would you like to add more keys if yes press 1 or press 0\n");
+    scanf("%d",&d);
+  if(d==1)
+  {
+  key=realloc(key,1*sizeof(int));
+  printf("Plese enter your key:\n");
+  scanf("%d",key+i); i++;
+  }
+  else
+  {
+    break;
+  }
+  }
+  printf("After 10AM no keys are acceptable\n");
+  printf("The keys you have stored here are: \n");
+  int j;
+  for(j=0;j<i;j++)
+  {
+  printf("Key for Flat no %d is:%d\n",j+1,*(key+j));
+  }
+  return 0;
+}
