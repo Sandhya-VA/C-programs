@@ -1,0 +1,18 @@
+/*Objective - Implementation of null pointer concept.
+
+Author name - Sandhya V
+Created on - 19/12/2019
+Dependencies - 
+Modified on - 
+*/
+//preprocessor directives
+#include <stdio.h>
+
+int main(void) {
+  int a=10;
+  int *x=NULL;
+  printf("\nThe value of x is %p",x);
+  x=&a;
+  printf("\nThe value of x is %p",x);
+  return 0;
+}
