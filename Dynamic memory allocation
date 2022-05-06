@@ -1,0 +1,31 @@
+/*Objective - Implementation of dynamic memory allocation concept.
+
+Author name - Sandhya V
+Created on - 20/12/2019
+Dependencies - 
+Modified on - 
+*/
+//preprocessor directive
+#include <stdio.h>
+#include<stdlib.h>
+int main() {
+  int *ptr=(int *) malloc (10*sizeof(int));
+  if(ptr==NULL)
+  {
+    printf("Memory not allocated\n");
+  }
+  else  
+  {
+   printf("Memory allocated successfully\n");
+  }
+  printf("The address of the pointer is:%p\n",ptr);
+  for(int i=0;i<10;i++)
+  {
+    ptr[i]=i;
+  }
+  for(int i=0;i<10;i++)
+  {
+    printf("%d\n",ptr[i]);
+  }
+  return 0;
+}
