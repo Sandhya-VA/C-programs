@@ -1,0 +1,66 @@
+/*Objective - To implement a program which asks user to set password based on format specified.
+
+Author name - Sandhya V
+Created on - 19/12/2019
+Dependencies - 
+Modified on - 
+*/
+//preprocessor directive
+#include <stdio.h>
+#include <string.h>
+int main(void)
+{
+  char pass[50],rev[50],name[50];
+  int i,alphau=0,alphal=0,digit=0,spc=0,k,j=0,l;
+  int len=strlen(pass);
+  char pi[50]="";
+  printf("Your name please\n");
+  scanf("%s",name);
+  printf("Hi %s, please enter the password: ",name);
+  scanf("%s",pass);
+  for(i=0; pass[i]!='\0'; i++)
+  {
+    if(pass[i]>=65 && pass[i]<=90)
+    {
+    alphau++; 
+    }
+    else if(pass[i]>=97 && pass[i]<=122)
+    {
+    alphal++;
+    }
+    else if(pass[i]>='0' && pass[i]<='9')
+    {
+    digit++;
+    pi[j]=pass[i];
+    j++;
+    }
+    else if(pass[i]=='*'|| pass[i]=='@'|| pass[i] =='&' ||pass[i]=='$')
+    {
+    spc++;
+    }
+    k=0;
+    }
+    if(digit>=3 && alphal>=1 && alphau>=1 && spc==1)
+    {
+      printf("Hey congrats! \n%s your password set successfully\n",name);
+      printf("Password in reverse order: ");
+    for(i=strlen(pass);i>=0;i--)
+    {
+      rev[k]=pass[i];
+      printf("%c",rev[k]);
+    }
+    for(i=0;i<strlen(pass);i++)
+    {
+      if(pass[i]=='*'|| pass[i]=='@'|| pass[i] =='&' ||pass[i]=='$')
+      {
+        pi[j]=pass[i];
+      }
+    }
+    printf("\nDigits and special characters in your password: %s",pi);
+    }
+    else
+    {
+      printf("OOPS! Invalid password.\nPlease try again %s",name);
+    }
+return 0;
+}
