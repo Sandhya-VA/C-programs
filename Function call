@@ -1,0 +1,21 @@
+/*Objective - Implementation of function call concept.
+
+Author name - Sandhya V
+Created on - 19/12/2019
+Dependencies - 
+Modified on - 
+*/
+//preprocessor directive
+#include <stdio.h>
+void change(int num) {
+  printf("Before adding value inside function num=%d\n",num);
+  num=num+100;
+  printf("Adding adding value inside function num=%d\n",num);
+}
+int main(void) {
+  int x=100;
+  printf("Before function call x=%d\n",x);
+  change(x);
+  printf("After function call x=%d\n",x);
+  return 0;
+}
